@@ -1,0 +1,8 @@
+# сборка
+Snow.app/
+build/
+Snow
+*.iconset/
+
+# macOS
+.DS_Store
