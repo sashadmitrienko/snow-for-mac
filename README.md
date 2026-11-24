@@ -1,5 +1,7 @@
 # ❄︎ Snow for Mac
 
+![Snow for Mac](docs/demo.gif)
+
 Snow falls across your Mac's screen, piles up on top of your windows and slides off when you shake them. Sweep it away with the cursor, roll snowballs, build snowmen, and have a snowball fight.
 
 [Русская версия ниже](#-снег-для-mac)
