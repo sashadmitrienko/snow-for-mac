@@ -1,8 +1,10 @@
 name: Build & Release
 
 # Собирает Snow.app на Маке от GitHub.
-# Новый тег вида v3.1 → сборка + релиз с готовым Snow.zip.
+# Опубликовал релиз на сайте (или запушил тег v*) → к релизу прикрепится готовый Snow.zip.
 on:
+  release:
+    types: [published]
   push:
     tags: ['v*']
   workflow_dispatch:
