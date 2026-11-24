@@ -30,7 +30,16 @@ These work from any app.
 | ⌃⌥⌘ B | Snowball fight |
 | ⌃⌥⌘ F | Fireworks |
 
-## Install
+## Download
+
+Grab `Snow.zip` from [Releases](https://github.com/sashadmitrienko/snow-for-mac/releases/latest), unzip it and move `Snow.app` to Applications.
+
+The app isn't signed with an Apple developer certificate, so macOS will block it the first time you open it. To allow it:
+
+- open **System Settings → Privacy & Security**, scroll down and click **Open Anyway** next to the message about Snow; or
+- run this in Terminal: `xattr -dr com.apple.quarantine /Applications/Snow.app`
+
+## Build from source
 
 You need macOS 12 or later and the Xcode Command Line Tools (`xcode-select --install`).
 
@@ -82,7 +91,16 @@ The app asks for no system permissions. It reads only the position and size of w
 | ⌃⌥⌘ B | Снежная битва |
 | ⌃⌥⌘ F | Салют |
 
-## Установка
+## Скачать
+
+Скачай `Snow.zip` в [Releases](https://github.com/sashadmitrienko/snow-for-mac/releases/latest), распакуй и перетащи `Snow.app` в «Программы».
+
+Приложение не подписано сертификатом разработчика Apple, поэтому при первом запуске macOS его заблокирует. Чтобы разрешить запуск:
+
+- открой **Системные настройки → Конфиденциальность и безопасность**, пролистай вниз и нажми **«Всё равно открыть»** рядом с сообщением про Snow; или
+- выполни в Терминале: `xattr -dr com.apple.quarantine /Applications/Snow.app`
+
+## Сборка из исходников
 
 Нужны macOS 12 или новее и Command Line Tools (`xcode-select --install`).
 

@@ -1,0 +1,35 @@
+name: Build & Release
+
+# Собирает Snow.app на Маке от GitHub.
+# Новый тег вида v3.1 → сборка + релиз с готовым Snow.zip.
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Snow.app
+        run: bash build.sh
+
+      - name: Zip
+        run: ditto -c -k --keepParent Snow.app Snow.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Snow
+          path: Snow.zip
+
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: Snow.zip
+          generate_release_notes: true
